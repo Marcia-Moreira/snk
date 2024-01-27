@@ -38,8 +38,8 @@ jobs:
         with:
           push: true
           tags: |
-            platane/snk:${{ github.sha }}
-            platane/snk:${{ github.event.inputs.version }}
+            marcia-moreira/snk:${{ github.sha }}
+            marcia-moreira/snk:${{ github.event.inputs.version }}
 
       - name: update action.yml to point to the newly created docker image
         run: |
@@ -88,3 +88,5 @@ jobs:
           tag: v${{ github.event.inputs.version }}
           body: ${{ github.event.inputs.description }}
           prerelease: ${{ steps.push-tags.outputs.prerelease }}
+
+# Alterei nome platane por marcia-moreira
